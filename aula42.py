@@ -1,0 +1,25 @@
+frase = 'i was there for you oh in your darkest times but i wonder where were you when i was at my worst down on my knees'
+
+
+i = 0
+qtd_apareceu_mais_vezes = 0
+letra_apareceu_mais_vezes = ''
+
+while i < len(frase):
+    letra_atual = frase[i]
+
+    if letra_atual == ' ':
+        i += 1
+        continue 
+
+    qtd_atual = frase.count(letra_atual)
+
+    if qtd_apareceu_mais_vezes <= qtd_atual:
+        qtd_apareceu_mais_vezes = qtd_atual
+        letra_apareceu_mais_vezes = letra_atual
+
+    i += 1
+
+print('A letra que mais apareceu foi '
+      f'"{letra_apareceu_mais_vezes}" que apareceu '
+      f'{qtd_apareceu_mais_vezes} vezes')
